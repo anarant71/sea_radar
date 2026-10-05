@@ -23,6 +23,7 @@ jobs:
           cache: npm
 
       - run: npm ci
+      - run: npx next typegen
       - run: npx tsc --noEmit
       - run: npx playwright install --with-deps chromium
       - run: npm test
