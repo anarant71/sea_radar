@@ -1,0 +1,110 @@
+/*
+ * Высота задаётся всей цепочке от html до контейнера карты. Проценты считаются
+ * от родителя, поэтому пропуск любого звена схлопывает карту в нулевую высоту.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.screen {
+  height: 100%;
+}
+
+/* Карта занимает всю свободную ширину, панель — фиксированную полосу справа. */
+.radar {
+  display: flex;
+  height: 100%;
+}
+
+.map {
+  flex: 1;
+  height: 100%;
+}
+
+.panel {
+  width: 260px;
+  flex: none;
+  padding: 12px;
+  border-left: 1px solid #d4d4d8;
+  overflow-y: auto;
+}
+
+/* Кнопка стоит первой в панели, подпись источника — под ней. */
+.load-button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border: 1px solid #1d4ed8;
+  border-radius: 6px;
+  background: #1d4ed8;
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Пока идёт сбор, кнопка недоступна — это видно, а не только заблокировано. */
+.load-button:disabled {
+  border-color: #a1a1aa;
+  background: #a1a1aa;
+  cursor: default;
+}
+
+.source {
+  margin: 0;
+  font-size: 14px;
+  color: #52525b;
+}
+
+/* Сообщение под подписью: пустой результат или причина ошибки. */
+.notice {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #3f3f46;
+}
+
+.card {
+  margin-top: 12px;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.card-rows {
+  margin: 0;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+}
+
+.card-row dt {
+  color: #52525b;
+}
+
+.card-row dd {
+  margin: 0;
+  text-align: right;
+  /* Название задаёт экипаж: длинное слово должно переноситься, а не растягивать
+     панель. */
+  overflow-wrap: anywhere;
+}
+
+/* Значок центрируется в своём маркере, чтобы поворот шёл вокруг судна. */
+.vessel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

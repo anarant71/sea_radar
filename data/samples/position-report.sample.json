@@ -1,0 +1,32 @@
+{
+  "MetaData": {
+    "MMSI": 538002013,
+    "MMSI_String": 538002013,
+    "ShipName": "BERN                ",
+    "latitude": 51.03991,
+    "longitude": 1.40933,
+    "time_utc": "2026-09-17 17:32:03.718165747 +0000 UTC"
+  },
+  "MessageType": "PositionReport",
+  "Message": {
+    "PositionReport": {
+      "MessageID": 1,
+      "RepeatIndicator": 0,
+      "UserID": 538002013,
+      "Valid": true,
+      "NavigationalStatus": 0,
+      "RateOfTurn": 0,
+      "Sog": 8,
+      "PositionAccuracy": false,
+      "Longitude": 1.4093266666666666,
+      "Latitude": 51.03990833333333,
+      "Cog": 229.4,
+      "TrueHeading": 231,
+      "Timestamp": 58,
+      "SpecialManoeuvreIndicator": 0,
+      "Spare": 0,
+      "Raim": false,
+      "CommunicationState": 100510
+    }
+  }
+}
